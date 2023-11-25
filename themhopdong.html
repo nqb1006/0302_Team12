@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Hợp đồng đầy đủ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: whitesmoke;
+            color: red;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+        left-column {
+            flex:1;
+            margin-right: 20px;
+        }
+        right-column{
+            flex: 1;
+            top: 100px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="wintribe.jpg" alt="Logo Công ty">
+        <h1></h1>
+        <button class="add-button">Quản lý Bất động sản</button>
+        <button class="add-button"onclick="redirectToCreatePage()">Quản lý hợp đồng</button>
+    </header>
+    <h1>Thêm Hợp đồng đầy đủ</h1>
+
+    <form>
+        <label for="partner">Họ và tên </label>
+        <input type="text" id="partner" name="partner"required>
+        <label for="signDate">Ngày sinh:</label>
+        <input type="date" id="signDate" name="signDate" required>
+        <label for="contractNumber">ID:</label>
+        <input type="text" id="contractNumber" name="contractNumber" required>
+        <label for="partner">Địa chỉ:</label>
+        <input type="text" id="partner" name="partner" required>
+        <label for="contractNumber">Số điện thoại :</label>
+        <input type="List" id="contractNumber" name="contractNumber" required>
+        <label for="contractNumber">Mã bất động sản:</label>
+        <input type="List" id="contractNumber" name="contractNumber" required>
+        <label for="contractNumber">Ngày lập hợp đồng :</label>
+        <input type="List" id="contractNumber" name="contractNumber" required>
+        <label for="contractNumber">Giá trị hợp đồng :</label>
+        <input type="text" id="contractNumber" name="contractNumber" required>
+        <label for="contractNumber">Số tiền đã cọc :</label>
+        <input type="text" id="contractNumber" name="contractNumber" required>
+        <label for="contractNumber">Số tiền còn lại :</label>
+        <input type="text" id="contractNumber" name="contractNumber" required>
+        <label for="partner">Trạng thái :</label>
+        <input type="text" id="partner" name="partner" required>
+
+        
+        <label for="partner"></label>
+
+        <!-- Thêm các trường khác nếu cần -->
+
+        <button type="submit"onclick="redirectToCreatePage()">Lưu Hợp đồng</button>
+    </form>
+    <script>
+        function luuHopDong() {
+            // Lấy giá trị từ các trường nhập liệu
+            var fullName = document.getElementById("partner").value;
+            var yearOfBirth = document.getElementById("signDate").value;
+            var id = document.getElementById("contractNumber").value;
+            var address = document.getElementById("partner").value;
+            var mobile = document.getElementById("contractNumber").value;
+            var propertyId = document.getElementById("contractNumber").value;
+            var dateOfContract = document.getElementById("contractNumber").value;
+            var price = document.getElementById("contractNumber").value;
+            var deposit = document.getElementById("partner").value;
+            var remain = document.getElementById("partner").value;
+            var status = document.getElementById("contractNumber").value;
+
+            // Tạo đối tượng hợp đồng
+            var hopDongMoi = {
+                ma: generateMaHopDong(),  // Hàm để sinh mã tự động
+                fullName: fullName,
+                yearOfBirth: yearOfBirth,
+                id: id,
+                address: address,
+                mobile: mobile,
+                propertyId: propertyId,
+                dateOfContract: dateOfContract,
+                price: price,
+                deposit: deposit,
+                remain: remain,
+                status: status
+            };
+
+            // Thực hiện lưu đối tượng hợp đồng vào cơ sở dữ liệu
+            // (Trong ví dụ này, chỉ là hiển thị thông tin hợp đồng ra console)
+            console.log("Hợp đồng đã lưu:", hopDongMoi);redirectToCreatePage();}
+            function generateMaHopDong() {
+            // Hàm sinh mã hợp đồng tự động
+            return 'HD' + Date.now();
+        }
+        function redirectToCreatePage() {
+            window.location.href = "trangfullcontract.html"; }
+    </script>
+    <footer>
+        <p>&copy;CopyRight by Team Wintribe.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Hợp đồng đầy đủ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding-right: 800px;
+            padding-left: 50px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        header img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        left-column {
+            flex:1;
+            margin-right: 20px;
+        }
+        right-column{
+            flex: 1;
+            top: 100px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .search-form {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 70%;
+            padding: 8px;
+        }
+        .search-button {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .add-button {
+            padding: 8px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="wintribe.jpg" alt="Logo Công ty">
+        <h1>Quản lý  </h1>
+        <button class="add-button">Quản lý Bất động sản</button>
+        <button class="add-button">Quản lý hợp đồng</button>
+    </header>
+    <div id="left-column">
+        <h2>DANH SÁCH HỢP ĐỒNG</h2>
+        <div id="right-column">    
+            <!-- Form tìm kiếm -->
+            <div class="search-form">
+                <input type="text" class="search-input" placeholder="Tìm kiếm...">
+                <button class="search-button">Tìm kiếm</button>
+            </div>
+    
+            <!-- Nút thêm Hợp đồng -->
+            <button class="add-button"onclick="redirectToCreatePage()">Thêm Hợp đồng</button>
+        </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã Hợp đồng</th>
+                <th>Họ tên người mua</th>
+                <th>Sinh năm</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Mã bất động sản</th>
+                <!-- Thêm các cột khác nếu cần -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dữ liệu hợp đồng sẽ được thêm vào đây -->
+            <tr>
+                <td>HD001</td>
+                <td>Nguyễn Quốc Bảo</td>
+                <td>2003</td>
+                <td>45 Nguyễn Khắc Nhu, Phường Cô Giang, Quận 1</td>
+                <td>0123456789</td>
+                <td>BDS001</td>
+                <!-- Thêm dữ liệu cho các cột khác -->
+            </tr>
+            <tr>
+                <td>HD002</td>
+                <td>Lư Thiện Phúc</td>
+                <td>2003</td>
+                <td>47 Nguyễn Khắc Nhu, Phường Cô Giang, Quận 1</td>
+                <td>0123456789</td>
+                <td>BDS002</td>
+                <!-- Thêm dữ liệu cho các cột khác -->
+            </tr>
+            <tr>
+                <td>HD003</td>
+                <td>Nguyễn Diệp Lý Triển</td>
+                <td>2003</td>
+                <td>49 Nguyễn Khắc Nhu, Phường Cô Giang, Quận 1</td>
+                <td>0123456789</td>
+                <td>BDS003</td>
+            </tr>
+            <tr>
+                <td>HD004</td>
+                <td>Đặng Đức Thịnh</td>
+                <td>2002</td>
+                <td>233A Đ. Phan Văn Trị, Phường 11, Bình Thạnh</td>
+                <td>0123456789</td>
+                <td>BDS004</td>
+            </tr>
+            <tr>
+                <td>HD005</td>
+                <td>Cao Hoài Thuận</td>
+                <td>2003</td>
+                <td>69/68 Đ. Đặng Thuỳ Trâm, Phường 13, Bình Thạnh</td>
+                <td>0123456789</td>
+                <td>BDS005</td>
+            </tr>
+            <!-- Thêm hàng cho mỗi hợp đồng khác -->
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy;CopyRight byTeam Wintribe.</p>
+    </footer>
+    <script>
+        function redirectToCreatePage() {
+            window.location.href = "themhopdong.html"; }
+    </script>
+</body>
+</html>
